@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Наши работы — Галерея автомобилей в пленке SafeX</title>
+	<meta name="description" content="Посмотрите примеры работ по оклейке автомобилей пленкой SafeX. Фото и видео реальных проектов — от классики до эксклюзива.">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="preload" href="../src/fonts/NTSomic/NTSomic-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__container container">
+			<a class="header__logo" href="/">
+				<img src="src/images/icons/logo.svg" alt="Логотип SafeX" width="132" height="35">
+			</a>
+
+			<nav class="header__nav nav">
+				<p class="nav__title">Продукция</p>
+				<ul class="nav__list nav__list--products">
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Антигравийные пленки</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Тонировочные пленки</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Атермальные пленки</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Пленки для защиты лобового стекла</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Пленки для защиты фар, панорамных крыш и заднего стекла</a>
+					</li>
+				</ul>
+
+				<p class="nav__title">Навигация</p>
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a class="nav__link" href="/about.html">О компании</a>
+					</li>
+					<li class="nav__item nav__item--catalog">
+						<a class="nav__link" href="/catalog.html">Продукция</a>
+						<ul class="nav__sub-menu sub-menu">
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Антигравийные пленки</a>
+							</li>
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Тонировочные пленки</a>
+							</li>
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Атермальные пленки</a>
+							</li>
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Пленки для защиты лобового стекла</a>
+							</li>
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Для защиты фар, крыши и заднего стекла</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/dealer.html">Стать дилером</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/portfolio.html">Портфолио</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/news.html">Новости</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/centers.html">Где купить</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/contacts.html">Контакты</a>
+					</li>
+					<li class="nav__item nav__item--search header-search">
+						<form class="header-search__form" id="search-form" role="search" action="/" method="get">
+							<input class="header-search__input" type="text" name="search" placeholder="Поиск по сайту" aria-label="Введите запрос">
+							<button class="header-search__close" type="reset" aria-label="Очистить поиск"></button>
+						</form>
+						<button class="nav__link nav__link--search header-search__btn" form="search-form" type="submit" aria-label="Начать поиск"></button>
+					</li>
+				</ul>
+			</nav>
+
+			<a class="header__phone" href="tel:+74992887791" aria-label="Позвонить нам">8 499 288 77 91</a>
+
+			<div class="header__actions">
+				<a class="header__cart" href="/cart.html" aria-label="Перейти в корзину">
+					<span class="header__cart-count">2</span>
+				</a>
+				<button class="header__menu" aria-label="Открыть меню" type="button"></button>
+			</div>
+		</div>
+	</header>
+
+	<main class="portfolio-page container">
+		<nav class="breadcrumbs" aria-label="Хлебные крошки">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link" href="/">Главная</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__current" aria-current="page">Портфолио</span>
+				</li>
+			</ul>
+		</nav>
+
+		<h1 class="portfolio-page__title">Портфолио</h1>
+
+		<ul class="portfolio-page__filter" aria-label="Категории работ">
+			<li class="portfolio-page__item">
+				<a class="portfolio-page__btn is-active" href="#" aria-current="page">Все</a>
+			</li>
+			<li class="portfolio-page__item">
+				<a class="portfolio-page__btn" href="#">Антигравийные</a>
+			</li>
+			<li class="portfolio-page__item">
+				<a class="portfolio-page__btn" href="#">Тонировочные</a>
+			</li>
+			<li class="portfolio-page__item">
+				<a class="portfolio-page__btn" href="#">Атермальные</a>
+			</li>
+			<li class="portfolio-page__item">
+				<a class="portfolio-page__btn" href="#">Для лобового стекла</a>
+			</li>
+			<li class="portfolio-page__item">
+				<a class="portfolio-page__btn" href="#">Для фар, стекл и крыш</a>
+			</li>
+		</ul>
+
+		<section class="portfolio-page__gallery gallery">
+			<h2 class="visually-hidden">Фотографии наших работ</h2>
+			<ul class="gallery__list">
+				<li class="gallery__item">
+					<figure class="gallery__pic">
+						<img src="src/images/portfolio-1.jpg" alt="Результат оклейки переднего бампера пленкой SafeX" loading="lazy" width="601" height="489">
+					</figure>
+				</li>
+				<li class="gallery__item">
+					<figure class="gallery__pic">
+						<img src="src/images/portfolio-1.jpg" alt="Результат оклейки переднего бампера пленкой SafeX" loading="lazy" width="601" height="489">
+					</figure>
+				</li>
+				<li class="gallery__item">
+					<figure class="gallery__pic">
+						<img src="src/images/portfolio-1.jpg" alt="Результат оклейки переднего бампера пленкой SafeX" loading="lazy" width="601" height="489">
+					</figure>
+				</li>
+				<li class="gallery__item">
+					<figure class="gallery__pic">
+						<img src="src/images/portfolio-1.jpg" alt="Результат оклейки переднего бампера пленкой SafeX" loading="lazy" width="601" height="489">
+					</figure>
+				</li>
+				<li class="gallery__item">
+					<figure class="gallery__pic">
+						<img src="src/images/portfolio-1.jpg" alt="Результат оклейки переднего бампера пленкой SafeX" loading="lazy" width="601" height="489">
+					</figure>
+				</li>
+				<li class="gallery__item">
+					<figure class="gallery__pic">
+						<img src="src/images/portfolio-1.jpg" alt="Результат оклейки переднего бампера пленкой SafeX" loading="lazy" width="601" height="489">
+					</figure>
+				</li>
+			</ul>
+			<button class="gallery__btn">Показать еще</button>
+		</section>
+
+		<section class="consultation">
+			<div class="consultation__wrapper">
+				<div class="consultation__content">
+					<h2 class="consultation__title">Получить консультацию</h2>
+					<form class="consultation__form form form--small" action="#">
+						<input class="form__field" name="user_name" placeholder="Ваше имя" type="text">
+						<input class="form__field" name="user_email" placeholder="E-mail *" type="email" required>
+						<input class="form__field" name="user_phone" placeholder="+7 (___)___-__-__ *" type="tel" required>
+						<textarea class="form__field form__field--full form__field--textarea" name="user_message" placeholder="Напишите нам"></textarea>
+						<label class="consultation__agreement form__control form__control--checkbox form__control--full">
+							<input class="visually-hidden" type="checkbox" name="policy_agreement" required>
+							<span class="form__desc">
+								Нажимая на кнопку, вы соглашаетесь с <a class="form__link" href="#">политикой конфиденциальности</a>
+							</span>
+						</label>
+						<button class="consultation__btn" type="submit">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__header">
+			<div class="footer__header-container container">
+				<a class="footer__logo" href="/">
+					<img src="src/images/icons/logo.svg" alt="Логотип SafeX" width="132" height="35">
+				</a>
+				<div class="footer__contact">
+					<span class="footer__text">По всем вопросам:</span>
+					<a class="footer__phone" href="tel:+74992887791" aria-label="Позвонить нам">8 499 288 77 91</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer__body container">
+			<div class="footer__content">
+				<p class="footer__slogan">SafeX — защита без компромиссов: стиль, который оберегает</p>
+				<div class="footer__info">
+					<div class="footer__office">
+						<span class="footer__label">Адрес:</span>
+						<address class="footer__address">Россия, г. Москва, 1-ый Вязовский проезд, д. 4, стр. 1, 507</address>
+					</div>
+					<ul class="footer__socials socials">
+						<li class="socials__item">
+							<a class="socials__link socials__link--vk" href="#" aria-label="Перейти в Вконтакте"></a>
+						</li>
+						<li class="socials__item">
+							<a class="socials__link socials__link--yt" href="#" aria-label="Перейти в YouTube"></a>
+						</li>
+						<li class="socials__item">
+							<a class="socials__link socials__link--tg" href="#" aria-label="Перейти в Telegram"></a>
+						</li>
+						<li class="socials__item">
+							<a class="socials__link socials__link--in" href="#" aria-label="Перейти в Instagram"></a>
+						</li>
+					</ul>
+				</div>
+
+				<nav class="footer__nav">
+					<div class="footer__nav-group">
+						<h2 class="footer__title">Продукция</h2>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Антигравийные пленки</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Тонировочные пленки</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Атермальные пленки</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Пленки для защиты лобового стекла</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Пленки для защиты фар, панорамных крыш и заднего стекла</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__nav-group">
+						<h2 class="footer__title">Навигация</h2>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a class="footer__link" href="/about.html">О компании</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/offices.html">Установка</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/dealer.html">Стать дилером</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/portfolio.html">Портфолио</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/news.html">Новости</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+			<div class="footer__bottom">
+				<p class="footer__copy">© 2026. Все права защищены</p>
+				<div class="footer__legal">
+					<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
+					<a class="footer__legal-link footer__legal-link--seojazz" href="#">Разработка сайта</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

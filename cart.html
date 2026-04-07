@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title> Ваша корзина — Оформление заказа в магазине SafeX</title>
+	<meta name="description" content="Проверьте ваш список покупок и перейдите к быстрой оплате. Бесплатная доставка при выполнении условий акции.">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="preload" href="../src/fonts/NTSomic/NTSomic-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__container container">
+			<a class="header__logo" href="/">
+				<img src="src/images/icons/logo.svg" alt="Логотип SafeX" width="132" height="35">
+			</a>
+
+			<nav class="header__nav nav">
+				<p class="nav__title">Продукция</p>
+				<ul class="nav__list nav__list--products">
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Антигравийные пленки</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Тонировочные пленки</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Атермальные пленки</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Пленки для защиты лобового стекла</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/catalog.html">Пленки для защиты фар, панорамных крыш и заднего стекла</a>
+					</li>
+				</ul>
+
+				<p class="nav__title">Навигация</p>
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a class="nav__link" href="/about.html">О компании</a>
+					</li>
+					<li class="nav__item nav__item--catalog">
+						<a class="nav__link" href="/catalog.html">Продукция</a>
+						<ul class="nav__sub-menu sub-menu">
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Антигравийные пленки</a>
+							</li>
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Тонировочные пленки</a>
+							</li>
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Атермальные пленки</a>
+							</li>
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Пленки для защиты лобового стекла</a>
+							</li>
+							<li class="sub-menu__item">
+								<a class="sub-menu__link" href="/catalog.html">Для защиты фар, крыши и заднего стекла</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/dealer.html">Стать дилером</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/portfolio.html">Портфолио</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/news.html">Новости</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/centers.html">Где купить</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="/contacts.html">Контакты</a>
+					</li>
+					<li class="nav__item nav__item--search header-search">
+						<form class="header-search__form" id="search-form" role="search" action="/" method="get">
+							<input class="header-search__input" type="text" name="search" placeholder="Поиск по сайту" aria-label="Введите запрос">
+							<button class="header-search__close" type="reset" aria-label="Очистить поиск"></button>
+						</form>
+						<button class="nav__link nav__link--search header-search__btn" form="search-form" type="submit" aria-label="Начать поиск"></button>
+					</li>
+				</ul>
+			</nav>
+
+			<a class="header__phone" href="tel:+74992887791" aria-label="Позвонить нам">8 499 288 77 91</a>
+
+			<div class="header__actions">
+				<a class="header__cart" href="/cart.html" aria-label="Перейти в корзину">
+					<span class="header__cart-count">2</span>
+				</a>
+				<button class="header__menu" aria-label="Открыть меню" type="button"></button>
+			</div>
+		</div>
+	</header>
+
+	<main class="cart-page">
+		<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link" href="/">Главная</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__current" aria-current="page">Корзина</span>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="container container--narrow">
+			<h1 class="cart-page__title">Корзина</h1>
+
+			<div class="cart-page__full" id="cart-full">
+				<p class="cart-page__notice">После оформления заказа на ваш адрес будет выслано письмо с дальнейшими инструкциями по оплате. Для способа доставки Курьером, обязательно укажите свой адрес.</p>
+
+				<div class="cart-page__content">
+					<div class="cart-page__main">
+						<section class="cart-page__products">
+							<h2 class="visually-hidden">Добавленные товары</h2>
+							<ul class="cart-page__list">
+								<li class="cart-page__item cart-item">
+									<div class="cart-item__image">
+										<img src="../src/images/product-1.png" alt="SafeX Flex" width="113" height="64">
+									</div>
+									<a class="cart-item__link" href="/single-product.html">SafeX Flex</a>
+									<div class="cart-item__info">
+										<div class="cart-item__controls counter">
+											<button class="counter__btn counter__btn--minus" type="button" aria-label="Уменьшить количество"></button>
+											<input class="counter__input" name="cart[101][qty]" value="1" placeholder="1" type="number" min="1" max="999" aria-label="Количество товара">
+											<button class="counter__btn counter__btn--plus" type="button" aria-label="Увеличить количество"></button>
+										</div>
+										<div class="cart-item__price">32 000 ₽</div>
+									</div>
+									<button class="cart-item__delete" type="button" aria-label="Удалить из корзины"></button>
+								</li>
+								<li class="cart-page__item cart-item">
+									<div class="cart-item__image">
+										<img src="../src/images/product-1.png" alt="SafeX Flex" width="113" height="64">
+									</div>
+									<a class="cart-item__link" href="/single-product.html">SafeX Flex</a>
+									<div class="cart-item__info">
+										<div class="cart-item__controls counter">
+											<button class="counter__btn counter__btn--minus" type="button" aria-label="Уменьшить количество"></button>
+											<input class="counter__input" name="cart[101][qty]" value="1" placeholder="1" type="number" min="1" max="999" aria-label="Количество товара">
+											<button class="counter__btn counter__btn--plus" type="button" aria-label="Увеличить количество"></button>
+										</div>
+										<div class="cart-item__price">32 000 ₽</div>
+									</div>
+									<button class="cart-item__delete" type="button" aria-label="Удалить из корзины"></button>
+								</li>
+								<li class="cart-page__item cart-item">
+									<div class="cart-item__image">
+										<img src="../src/images/product-1.png" alt="SafeX Flex" width="113" height="64">
+									</div>
+									<a class="cart-item__link" href="/single-product.html">SafeX Flex</a>
+									<div class="cart-item__info">
+										<div class="cart-item__controls counter">
+											<button class="counter__btn counter__btn--minus" type="button" aria-label="Уменьшить количество"></button>
+											<input class="counter__input" name="cart[101][qty]" value="1" placeholder="1" type="number" min="1" max="999" aria-label="Количество товара">
+											<button class="counter__btn counter__btn--plus" type="button" aria-label="Увеличить количество"></button>
+										</div>
+										<div class="cart-item__price">32 000 ₽</div>
+									</div>
+									<button class="cart-item__delete" type="button" aria-label="Удалить из корзины"></button>
+								</li>
+							</ul>
+
+							<button class="cart-page__clear" type="button">Очистить корзину</button>
+						</section>
+
+						<section class="cart-page__checkout checkout">
+							<h2 class="checkout__title">Заполните форму для заказа</h2>
+							<form class="checkout__form form form--second form--accent" id="order-form" action="#">
+								<div class="checkout__fieldset">
+									<div class="form__wrapper">
+										<label class="form__label" for="user-name">Ваше имя</label>
+										<input class="form__field" id="user-name" name="customer_name" placeholder="Как к вам обращаться?" type="text">
+									</div>
+									<div class="form__wrapper">
+										<label class="form__label" for="user-phone">Телефон</label>
+										<input class="form__field" id="user-phone" name="customer_phone" placeholder="+7 (___)___-__-__ *" type="tel" required>
+									</div>
+									<div class="form__wrapper">
+										<label class="form__label" for="user-email">Ваш E-mail</label>
+										<input class="form__field" id="user-email" name="customer_email" placeholder="email@gmail.com" type="email">
+									</div>
+									<div class="form__wrapper">
+										<label class="form__label" for="user-comment">Комментарий к заказу</label>
+										<textarea class="form__field form__field--textarea" id="user-comment" name="order_comment" placeholder="Ваше сообщение"></textarea>
+									</div>
+								</div>
+
+								<fieldset class="checkout__fieldset">
+									<legend class="checkout__legend">Выберите доставку</legend>
+									<label class="form__control form__control--radio">
+										<input class="visually-hidden" type="radio" name="delivery_method" value="pickup" checked>
+										<span class="form__info">
+											<span class="form__title">Самовывоз</span>
+											<span class="form__text">(Россия, г. Москва, 1-ый Вязовский проезд, д. 4, стр. 1, 507)</span>
+										</span>
+									</label>
+									<label class="form__control form__control--radio">
+										<input class="visually-hidden" type="radio" name="delivery_method" value="courier">
+										<span class="form__title">Доставка курьером</span>
+									</label>
+									<div class="form__wrapper js-address-field" style="display: none; margin-top: 40px;">
+										<label class="form__label" for="user-address">Ваш адрес</label>
+										<textarea class="form__field form__field--textarea" id="user-address" name="order_address" placeholder="Введите адрес доставки"></textarea>
+									</div>
+								</fieldset>
+
+								<fieldset class="checkout__fieldset">
+									<legend class="checkout__legend">Выберите способ оплаты</legend>
+									<label class="form__control form__control--radio">
+										<input class="visually-hidden" type="radio" name="payment_method" value="cash" checked>
+										<span class="form__title">Наличными курьеру</span>
+									</label>
+									<label class="form__control form__control--radio">
+										<input class="visually-hidden" type="radio" name="payment_method" value="bank_transfer">
+										<span class="form__title">Банковский перевод</span>
+									</label>
+								</fieldset>
+							</form>
+						</section>
+					</div>
+
+					<aside class="cart-page__summary order-summary">
+						<h2 class="order-summary__title">Детали заказа</h2>
+						<dl class="order-summary__list">
+							<div class="order-summary__row">
+								<dt>Количество товаров:</dt>
+								<dd>3 шт.</dd>
+							</div>
+							<div class="order-summary__row">
+								<dt>Общая стоимость:</dt>
+								<dd>96 000 руб.</dd>
+							</div>
+							<div class="order-summary__row">
+								<dt>Доставка:</dt>
+								<dd>0 руб.</dd>
+							</div>
+							<div class="order-summary__row order-summary__row--total">
+								<dt>Итого:</dt>
+								<dd>96 000 руб</dd>
+							</div>
+						</dl>
+						<button class="order-summary__btn" form="order-form" type="submit">Оформить заказ</button>
+					</aside>
+				</div>
+
+				<section class="cart-page__consultation consultation">
+					<div class="consultation__wrapper">
+						<div class="consultation__content">
+							<h2 class="consultation__title">Получить консультацию</h2>
+							<form class="consultation__form form form--small" action="#">
+								<input class="form__field" name="user_name" placeholder="Ваше имя" type="text">
+								<input class="form__field" name="user_email" placeholder="E-mail *" type="email" required>
+								<input class="form__field" name="user_phone" placeholder="+7 (___)___-__-__ *" type="tel" required>
+								<textarea class="form__field form__field--full form__field--textarea" name="user_message" placeholder="Напишите нам"></textarea>
+								<label class="consultation__agreement form__control form__control--checkbox form__control--full">
+									<input class="visually-hidden" type="checkbox" name="policy_agreement" required>
+									<span class="form__desc">
+										Нажимая на кнопку, вы соглашаетесь с <a class="form__link" href="#">политикой конфиденциальности</a>
+									</span>
+								</label>
+								<button class="consultation__btn" type="submit">Отправить</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="cart-page__empty" id="cart-empty" style="display: none;">
+				<p class="cart-page__notice">Ваша корзина пуста</p>
+				<a href="/catalog.html" class="cart-page__btn">В каталог</a>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__header">
+			<div class="footer__header-container container">
+				<a class="footer__logo" href="/">
+					<img src="src/images/icons/logo.svg" alt="Логотип SafeX" width="132" height="35">
+				</a>
+				<div class="footer__contact">
+					<span class="footer__text">По всем вопросам:</span>
+					<a class="footer__phone" href="tel:+74992887791" aria-label="Позвонить нам">8 499 288 77 91</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer__body container">
+			<div class="footer__content">
+				<p class="footer__slogan">SafeX — защита без компромиссов: стиль, который оберегает</p>
+				<div class="footer__info">
+					<div class="footer__office">
+						<span class="footer__label">Адрес:</span>
+						<address class="footer__address">Россия, г. Москва, 1-ый Вязовский проезд, д. 4, стр. 1, 507</address>
+					</div>
+					<ul class="footer__socials socials">
+						<li class="socials__item">
+							<a class="socials__link socials__link--vk" href="#" aria-label="Перейти в Вконтакте"></a>
+						</li>
+						<li class="socials__item">
+							<a class="socials__link socials__link--yt" href="#" aria-label="Перейти в YouTube"></a>
+						</li>
+						<li class="socials__item">
+							<a class="socials__link socials__link--tg" href="#" aria-label="Перейти в Telegram"></a>
+						</li>
+						<li class="socials__item">
+							<a class="socials__link socials__link--in" href="#" aria-label="Перейти в Instagram"></a>
+						</li>
+					</ul>
+				</div>
+
+				<nav class="footer__nav">
+					<div class="footer__nav-group">
+						<h2 class="footer__title">Продукция</h2>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Антигравийные пленки</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Тонировочные пленки</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Атермальные пленки</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Пленки для защиты лобового стекла</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/catalog.html">Пленки для защиты фар, панорамных крыш и заднего стекла</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__nav-group">
+						<h2 class="footer__title">Навигация</h2>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a class="footer__link" href="/about.html">О компании</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/offices.html">Установка</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/dealer.html">Стать дилером</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/portfolio.html">Портфолио</a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="/news.html">Новости</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+			<div class="footer__bottom">
+				<p class="footer__copy">© 2026. Все права защищены</p>
+				<div class="footer__legal">
+					<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
+					<a class="footer__legal-link footer__legal-link--seojazz" href="#">Разработка сайта</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal" id="modal-order">
+		<div class="modal__content">
+			<button class="modal__close" type="button" aria-label="Закрыть окно"></button>
+			<div class="modal__step modal__step--success is-active" id="modal-step-success">
+				<p class="modal__title">Заказ принят</p>
+				<p class="modal__text">Мы свяжемся с вами в ближайшее время</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js" defer></script>
+</body>
+
+</html>
