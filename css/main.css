@@ -2018,6 +2018,7 @@ body:has(.modal.is-open) {
 }
 .gallery__item {
   aspect-ratio: 335/255;
+  cursor: pointer;
 }
 .gallery__pic {
   width: 100%;
