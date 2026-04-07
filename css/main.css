@@ -564,8 +564,7 @@ h4, .title-h5, .checkout__title, .checkout__legend, .factory-card__title {
   }
   .form--small .form__field {
     font-size: 20px;
-    padding-top: 21.5px;
-    padding-bottom: 21.5px;
+    padding: 21.5px 24px;
   }
   .form--small .form__field--textarea {
     min-height: 159px;
@@ -584,6 +583,7 @@ h4, .title-h5, .checkout__title, .checkout__legend, .factory-card__title {
 }
 
 .sub-menu {
+  white-space: normal;
   width: 355px;
   padding: 20px 0;
   background-color: #ffffff;
@@ -2542,17 +2542,17 @@ body:has(.modal.is-open) {
   margin-bottom: 24px;
   overflow: auto;
   scrollbar-width: thin;
-  scrollbar-color: #2d338e transparent;
+  scrollbar-color: rgba(187, 187, 203, 0.5) transparent;
 }
 .locations__menu::-webkit-scrollbar {
-  width: 3px;
+  width: 2px;
 }
 .locations__menu::-webkit-scrollbar-track {
   background: transparent;
 }
 .locations__menu::-webkit-scrollbar-thumb {
-  border-radius: 31px;
-  background-color: #2d338e;
+  border-radius: 32px;
+  background-color: rgba(187, 187, 203, 0.5);
   background-clip: content-box;
 }
 .locations__menu:has(.locations__info.is-open) {
@@ -3006,12 +3006,17 @@ body:has(.modal.is-open) {
 }
 .news-card__image {
   aspect-ratio: 335/223;
+  overflow: hidden;
 }
 .news-card__image img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.news-card__image:is(:hover, :focus-visible) img, .news-card__image:has(~ .news-card__content .news-card__title:is(:hover, :focus-visible)) img {
+  transform: scale(1.1);
 }
 .news-card__content {
   padding: 0 23px 26px 21px;
@@ -3037,9 +3042,6 @@ body:has(.modal.is-open) {
 }
 .news-card__link {
   display: block;
-}
-.news-card__link:is(:hover, :focus-visible) {
-  text-decoration: underline;
 }
 .news-card__excerpt {
   font-size: 15px;
