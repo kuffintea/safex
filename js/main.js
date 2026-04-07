@@ -14,44 +14,49 @@ document.addEventListener('DOMContentLoaded', () => {
 			modal.classList.add('is-closing');
 			setTimeout(() => {
 				modal.classList.remove('is-open', 'is-closing');
-				if (form) {
-					stepForm?.classList.add('is-active');
-					stepSuccess?.classList.remove('is-active');
+				if (form && stepForm && stepSuccess) {
+					stepForm.classList.add('is-active');
+					stepSuccess.classList.remove('is-active');
 					form.reset();
 				}
+				else if (!form && stepSuccess) {
+					stepSuccess.classList.add('is-active');
+				}
+				if (form) form.reset();
 			}, 300);
 		};
 
 		openBtn.addEventListener('click', (e) => {
-			if (openBtn.tagName === 'a' || openBtn.type === 'submit') {
-				if (form) {
-					if (!form.checkValidity()) {
-						form.reportValidity();
-						return;
-					}
-				}
+			if (openBtn.tagName === 'A' && !openBtn.getAttribute('form')) {
 				e.preventDefault();
+				modal.classList.add('is-open');
 			}
-			modal.classList.add('is-open');
 		});
+
+		if (form) {
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				e.stopImmediatePropagation();
+
+				modal.classList.add('is-open');
+
+				if (stepForm && stepSuccess) {
+					stepForm.classList.remove('is-active');
+					stepSuccess.classList.add('is-active');
+				}
+			});
+		}
 
 		closeBtn?.addEventListener('click', closeModal);
 		modal.addEventListener('click', (e) => {
 			if (e.target === modal) closeModal();
 		});
-
-		if (form && !externalFormId) {
-			form.addEventListener('submit', (e) => {
-				e.preventDefault();
-				stepForm?.classList.remove('is-active');
-				stepSuccess?.classList.add('is-active');
-			});
-		}
 	};
 
     initModal('modal-callback', '.home-hero__link');
 	initModal('modal-partner', '.dealer-hero__btn');
 	initModal('modal-order', '.order-summary__btn', 'order-form');
+	initModal('modal-consultation', '.consultation__btn', 'consultation-form');
 
 
 	const cookiePopup = document.getElementById('cookie-popup');

@@ -769,7 +769,7 @@ h4, .title-h5, .checkout__title, .checkout__legend, .factory-card__title {
 }
 
 @media (max-width: 1199px) {
-  html:has(.nav.is-open) {
+  body:has(.nav.is-open) {
     overflow: hidden;
   }
 }
@@ -1565,7 +1565,7 @@ h4, .title-h5, .checkout__title, .checkout__legend, .factory-card__title {
   }
 }
 
-html:has(.modal.is-open) {
+body:has(.modal.is-open) {
   overflow: hidden;
 }
 
