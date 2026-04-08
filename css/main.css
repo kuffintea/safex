@@ -4153,32 +4153,44 @@ body:has(.modal.is-open) {
 }
 
 .home-hero {
-  --bg-url: url('../src/images/banner-default.png');
   min-height: 566px;
   padding: 21px 20px 25px;
   color: #ffffff;
   background-color: rgba(45, 51, 142, 0.5);
-  background-image: var(--bg-url);
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
-.home-hero::before {
-  content: "";
-  background-image: var(--bg-url);
+.home-hero__bg {
   background-size: cover;
   background-position: center;
-  -webkit-mask-image: linear-gradient(232deg, transparent 50%, black 76%);
-          mask-image: linear-gradient(232deg, transparent 50%, black 76%);
+  background-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.6s ease-in-out;
+  will-change: opacity;
+  backface-visibility: hidden;
+}
+.home-hero__bg::before {
+  content: "";
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image: linear-gradient(232deg, transparent 50%, #000000 76%);
+          mask-image: linear-gradient(232deg, transparent 50%, #000000 76%);
   position: absolute;
   inset: 0;
   z-index: -2;
   filter: blur(10px);
-  transform: scale(1.1);
+  transform: scale(1.01);
+}
+.home-hero__content, .home-hero__widget, .home-hero__slider {
+  position: relative;
+  z-index: 2;
 }
 .home-hero__content {
   max-width: 335px;
@@ -4293,14 +4305,14 @@ body:has(.modal.is-open) {
     border-radius: 20px;
     padding: 43px 64px 66px;
   }
-  .home-hero::after {
+  .home-hero__bg::after {
     content: "";
     background-image: linear-gradient(68deg, rgba(45, 51, 142, 0.5) 0%, transparent 68%);
     position: absolute;
     inset: 0;
     z-index: -1;
   }
-  .home-hero::before {
+  .home-hero__bg::before {
     -webkit-mask-image: linear-gradient(232deg, transparent 62%, black 76%);
             mask-image: linear-gradient(232deg, transparent 62%, black 76%);
   }
