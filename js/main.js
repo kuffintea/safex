@@ -239,50 +239,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 	const heroSection = document.getElementById('hero-slider');
-	const preloadImages = (urls) => {
-		urls.forEach((url) => {
-			const img = new Image();
-			img.src = url;
+	if (heroSection) {
+		const slides = heroSection.querySelectorAll('.home-hero__slide');
+		const counter = heroSection.querySelector('.home-hero__counter');
+		const nextBtn = heroSection.querySelector('.home-hero__btn--next');
+		const prevBtn = heroSection.querySelector('.home-hero__btn--prev');
+
+		let heroIndex = 0;
+
+		const updateHero = (newIndex) => {
+			slides[heroIndex].classList.remove('is-active');
+
+			heroIndex = newIndex;
+
+			slides[heroIndex].classList.add('is-active');
+
+			if (counter) {
+				counter.textContent = `${heroIndex + 1}/${slides.length}`;
+			}
+		};
+
+		nextBtn?.addEventListener('click', () => {
+			const index = (heroIndex + 1 >= slides.length) ? 0 : heroIndex + 1;
+			updateHero(index);
 		});
-	};
-    if (heroSection) {
-        const images = JSON.parse(heroSection.dataset.images);
-		preloadImages(images);
-        const bgFirst = heroSection.querySelector('.home-hero__bg--first');
-        const bgSecond = heroSection.querySelector('.home-hero__bg--second');
-        const counter = heroSection.querySelector('.home-hero__counter');
 
-        let heroIndex = 0;
-        let isFirstActive = true;
-
-        bgFirst.style.backgroundImage = `url('${images[0]}')`;
-        bgFirst.style.opacity = '1';
-
-        const updateHero = (index) => {
-            if (index === heroIndex) return;
-            heroIndex = index;
-            const nextImg = `url('${images[heroIndex]}')`;
-
-            if (isFirstActive) {
-                bgSecond.style.backgroundImage = nextImg;
-                bgSecond.style.opacity = '1';
-                bgFirst.style.opacity = '0';
-            } else {
-                bgFirst.style.backgroundImage = nextImg;
-                bgFirst.style.opacity = '1';
-                bgSecond.style.opacity = '0';
-            }
-
-            isFirstActive = !isFirstActive;
-            if (counter) counter.textContent = `${heroIndex + 1}/${images.length}`;
-        };
-
-        heroSection.querySelector('.home-hero__btn--next')?.addEventListener('click', () => {
-            updateHero((heroIndex + 1) % images.length);
-        });
-
-        heroSection.querySelector('.home-hero__btn--prev')?.addEventListener('click', () => {
-            updateHero((heroIndex - 1 + images.length) % images.length);
-        });
-    }
+		prevBtn?.addEventListener('click', () => {
+			const index = (heroIndex - 1 < 0) ? slides.length - 1 : heroIndex - 1;
+			updateHero(index);
+		});
+	}
 });
