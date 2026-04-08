@@ -2087,7 +2087,7 @@ body:has(.modal.is-open) {
   .gallery--slider .gallery__list {
     display: flex;
     gap: 0;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
   }
   .gallery--slider .gallery__item {
     margin-bottom: 0;
