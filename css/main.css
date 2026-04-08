@@ -2005,17 +2005,6 @@ body:has(.modal.is-open) {
 .gallery__list:has(+ .gallery__slider) {
   margin-bottom: 19px;
 }
-.gallery__list--slider {
-  display: flex;
-  gap: 0;
-  overflow: hidden;
-}
-.gallery__list--slider .gallery__item {
-  margin-bottom: 0;
-  flex-grow: 1;
-  flex-basis: 100%;
-  flex-shrink: 0;
-}
 .gallery__item {
   aspect-ratio: 335/255;
   cursor: pointer;
@@ -2089,6 +2078,19 @@ body:has(.modal.is-open) {
 .gallery__btn {
   width: 100%;
   padding: 16px 24px;
+}
+.gallery--slider {
+  overflow: hidden;
+}
+.gallery--slider .gallery__list {
+  display: flex;
+  gap: 0;
+}
+.gallery--slider .gallery__item {
+  margin-bottom: 0;
+  flex-grow: 1;
+  flex-basis: 100%;
+  flex-shrink: 0;
 }
 @media (min-width: 1200px) {
   .gallery__heading {
