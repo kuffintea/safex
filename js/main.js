@@ -169,4 +169,72 @@ document.addEventListener('DOMContentLoaded', () => {
             closeGallery();
         }
     });
+
+
+	const sliderList = document.querySelector('.home-page__gallery-list');
+    const sliderBtns = document.querySelectorAll('.gallery__slider-btn');
+    const slides = sliderList ? sliderList.querySelectorAll('.gallery__item') : [];
+
+    if (sliderList && slides.length > 0) {
+        let currentIndex = 0;
+        let isMobile = window.innerWidth < 1200;
+
+        const updateSlider = (index) => {
+            if (!isMobile) return;
+
+            if (index >= slides.length) index = slides.length - 1;
+            if (index < 0) index = 0;
+
+            const offset = index * -100;
+            sliderList.style.transform = `translateX(${offset}%)`;
+
+            sliderBtns.forEach((btn, i) => {
+                btn.classList.toggle('is-active', i === index);
+            });
+            currentIndex = index;
+        };
+
+        const resetSlider = () => {
+            sliderList.style.transform = '';
+            currentIndex = 0;
+            sliderBtns.forEach((btn, i) => {
+                btn.classList.toggle('is-active', i === 0);
+            });
+        };
+
+        sliderBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                if (isMobile) updateSlider(index);
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            const wasMobile = isMobile;
+            isMobile = window.innerWidth < 1200;
+            if (wasMobile && !isMobile) resetSlider();
+        });
+
+        let touchStartX = 0;
+
+        sliderList.addEventListener('touchstart', e => {
+            if (isMobile) {
+                touchStartX = e.touches[0].clientX;
+            }
+        }, {passive: true});
+
+        sliderList.addEventListener('touchend', e => {
+            if (!isMobile) return;
+
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0 && currentIndex < slides.length - 1) {
+                    updateSlider(currentIndex + 1);
+                } else if (diff < 0 && currentIndex > 0) {
+                    updateSlider(currentIndex - 1);
+                }
+            }
+        }, {passive: true});
+    }
 });
